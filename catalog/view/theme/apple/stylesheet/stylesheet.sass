@@ -1,0 +1,608 @@
+@import "bourbon"
+@import "vars"
+@import "fonts"
+@import "catalog/view/theme/apple/stylesheet/mfp-zoom-in"
+
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  overflow-x: hidden
+  font-family: MyriadSetProText, sans-serif
+
+header
+  background-color: #333
+  padding: 7px 0
+  .dropdown
+    display: inline-block
+    a.dropdown-toggle
+      color: #999
+      font-size: 14px
+      margin-top: 3px 0 0
+      padding: 8px 0 4px
+      display: block
+      &:hover, &:active, &:focus
+        color: #fff
+        text-decoration: none
+
+ul.col-md-3
+  margin: 0
+
+.dropdown-menu
+  border-radius: 0
+  border: none
+  margin-top: 8px
+  left: 0
+  > li
+    > a
+      padding: 5px 20px
+      &:focus, &:hover
+        background-color: $accent2
+        color: #fff
+
+.header-phone
+  display: inline-block
+  color: #fff
+  float: right
+  font-size: 18px
+  padding-top: 4px
+  padding-left: 10px
+  border-left: 1px solid #444
+
+
+.logo
+  margin-top: 4px
+
+.form-control
+  &:focus
+    box-shadow: none
+
+#search
+  width: 100%
+  .form-control
+    padding: 5px 16px
+    height: 34px
+    border: none
+      radius: 0
+    background-color: #444
+    color: #fff
+    font:
+      style: italic
+      size: 13px
+    transition: background-color .25s ease,box-shadow .25s ease
+    box-shadow: transparent 0 0 0 1px
+    &:focus, &:hover
+      background-color: #555
+      box-shadow: #777 0 0 0 1px inset
+
+  .input-group-btn
+    position: absolute
+    right: 26px
+    .btn
+      padding: 9px 10px
+      border: none
+        radius: 0
+      background-color: transparent
+      color: #999
+      font-size: 13px
+
+.navbar-collapse.in
+  overflow-y: unset
+
+.top-menu
+  margin-bottom: 40px
+  border-bottom: 1px solid #EDEDED
+  .cart-wrapper
+    .dropdown-menu
+      padding: 15px
+      width: 460px
+  a
+    color: #333
+  .navbar
+    margin-bottom: 0
+    font-size: 14px
+    &-nav
+      >li
+        >a
+          padding-top: 14px
+          padding-bottom: 12px
+          &:hover, &:focus
+            text-decoration: underline
+            background: none
+
+#cart button + .dropdown-menu
+  margin-top: 1px
+  .btn-danger
+    border-radius: 15em
+    width: 20px
+    height: 20px
+    line-height: 0
+    padding: 0
+    text-align: center
+    font-size: 12px
+    background-color: #d9534f
+    li:first-child:last-child p
+      margin: 0
+
+#cart
+  button
+    background: $accent3
+    color: #fff
+    border-radius: 0
+    padding-top: 14px
+    padding-bottom: 15px
+    border: none
+    font-family: MyriadSetProThin, sans-serif
+    font-size: 16px
+    text-align: left
+
+.cart-wrapper
+  padding-left: 15px
+
+
+.toggle-top-text-left
+  color: $accent2
+
+.toggle-top-text
+  color: $accent
+
+.toggle-top-text,.toggle-top-text-left
+  text-transform: uppercase
+  display: inline-block
+  font-family: MyriadSetProSemiBold, sans-serif
+  padding: 16px 0
+
+.navbar-toggle
+  margin-right: 0
+
+.slideshow
+  border: none
+  box-shadow: none
+  border-radius: none
+
+.list-group-item
+  padding: 12px 15px
+  border-color: #EDEDED
+  transition: background .25s ease, color .25s, text-indent .25s ease, border-color .25s ease
+  border:
+    bottom: 1px transparent solid
+    top: 1px transparent solid
+  &:first-child
+     border-radius: 0
+     border-top: 1px #EDEDED solid
+  &:last-child
+     border-radius: 0
+     border-bottom: 1px #EDEDED solid
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover
+  background-color: $accent2
+  border-color: $accent2
+  color: #fff
+  text-indent: 10px
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover
+  background-color: darken($accent2,5%)
+  border-color: darken($accent2,5%)
+  text-indent: 10px
+
+#content
+  h3
+    text-align: center
+  p
+    img
+      max-width: 100%
+
+
+
+#common-home
+  #content
+    .slideshow
+      margin-bottom: 120px
+    h3
+      text-align: center
+      font-size: 34px
+      font-family: MyriadSetProThin, sans-serif
+      margin-bottom: 40px
+
+.product-layout
+  .price
+    font-size: 18px
+    font-family: MyriadSetProThin, sans-serif
+    .price-old
+      font-size: 15px
+      text-decoration: line-through
+  > .product-thumb
+    margin-bottom: 40px
+    transition: box-shadow .25s ease
+    padding: 40px 0 0
+    text-align: center
+    .image
+      padding: 0 25px
+      .img-responsive
+         display: initial
+    &:hover
+      box-shadow: #EDEDED 0 0 0 1px inset
+  .caption
+    padding: 0 25px
+    p
+      display: none
+      &.price
+        display: block
+      .price-tax
+        display: none
+    .rating
+      display: none
+  h4
+    margin-top: 25px
+    a
+      color: #333
+      font-size: 21px
+      font-family: MyriadSetProThin, sans-serif
+      &:hover, &:focus
+        text-decoration: none
+        border-bottom: #333 1px solid
+  .button-group
+    margin-top: 10px
+    >*
+      display: none
+      &:first-child
+        display: block
+      &.toclick
+        display: block
+  button, .button
+    &.toclick
+      font-size: 14px
+      color: #777
+      background-color: #f5f1f3
+      padding: 9px 0
+      &:hover, &:focus
+        background-color: darken(#f5f1f3,3%)
+        text-decoration: none
+
+    border: none
+    background-color: $accent2
+    color: #fff
+    width: 100%
+    padding: 8px 0
+    font-size: 18px
+    transition: background-color .25s ease
+    outline: none
+    &:hover, &:focus
+      background-color: lighten($accent2,5%)
+      text-decoration: none
+    &:active
+      background-color: darken($accent2,5%)
+    .fa
+      display: none
+
+#column-left
+  >div
+    >div
+      >blockquote
+        border: none
+        padding: 0
+        margin-top: 45px
+        color: #777
+        line-height: 1.3
+        ul
+          padding: 0
+          margin: 0
+          list-style-type: none
+          li
+            border: 5px #f7f7f7 solid
+            margin-bottom: 20px
+            padding: 15px 20px
+            background-color: transparent
+            transition: background-color .4s ease, border-color .2s ease, color .25s ease, transform .5s ease
+            font-size: 14px
+            padding-left: 45px
+            position: relative
+
+            &:nth-child(1)
+              >span
+                color: #921ad3
+              &:hover
+                background-color: #921ad3
+                border-color: #921ad3
+            &:nth-child(2)
+              >span
+                color: #F53737
+              &:hover
+                background-color: #F53737
+                border-color: #F53737
+            &:nth-child(3)
+              >span
+                color: #FF9320
+              &:hover
+                background-color: #FF9320
+                border-color: #FF9320
+            &:nth-child(4)
+              >span
+                color: #0079FF
+              &:hover
+                background-color: #0079FF
+                border-color: #0079FF
+
+
+            &:hover
+              border-color: #666
+              background-color: #666
+              color: #fff
+              transform: translateY(-5px)
+              >span
+                color: #fff
+            > span
+              display: block
+              font-size: 18px
+              margin-bottom: 6px
+              font-family: MyriadSetProSemiBold, sans-serif
+              > span
+                position: absolute
+                left: 15px
+                font-size: 18px
+
+.mfp-content
+  .product-popup
+    display: block
+    .price-tax
+      display: none
+    .pp-img-wrap
+      text-align: center
+      img
+        max-width: 90%
+        width: 90%
+        margin-top: 20px
+    .pp-content
+      h3
+        text-align: center
+        font-family: MyriadSetProThin, sans-serif
+        margin: 30px 0 15px
+    p
+      text-align: center
+      .price-old
+        text-decoration: line-through
+        font-size: 14px
+
+.product-popup
+  display: none
+  background-color: #fff
+  max-width: 320px
+  position: relative
+  margin: auto
+  padding: 15px
+  .success
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #fff
+    text-align: center
+    text-transform: uppercase
+    padding: 80% 10% 10%
+    display: none
+
+  form
+    position: relative
+    margin-top: 15px
+  h2
+    margin:
+      top: 15px
+      bottom: 10px
+    font-size: 28px
+    text-align: center
+    font-family: MyriadSetProThin, sans-serif
+  p
+    text-align: center
+  .btn
+    position: absolute
+    right: 0
+    top: 0
+
+.callback-form
+  .success
+    padding-top: 28%
+
+.form-control
+  border-radius: 0
+  font-family: arial, sans-serif
+
+.main-footer
+  margin-top: 60px
+  .footer-cnt
+    background-color: #333
+    padding: 7px 0
+    > .container
+      > .row
+        >div:last-child
+          border-left: #444 1px solid
+  .footer-mnu
+    ul
+      margin: 0
+      padding: 0
+      width: 100%
+      display: block
+      text-align: center
+      li
+        display: inline-block
+        font-size: 14px
+        float: none
+        a
+          color: #999
+          display: block
+          padding: 10px 14px
+          transition: all .25s ease
+          &:hover, &:focus
+            color: #b6b6b6
+            background-color: transparent
+            text-decoration: underline
+
+.nav-social
+  padding: 6px 0
+  text-align: right
+  ul , li
+    padding: 0
+    margin: 0
+  li
+    display: inline-block
+    a
+      color: #8f8f8f
+      font-size: 20px
+      padding: 0 5px
+      transition: color .25s ease
+      &:hover
+        color: lighten(#8f8f8f,10%)
+
+.footer-phone
+  background-color: #262626
+  color: #8c8c8c
+  padding: 15px 0 35px
+  line-height: 1.3
+  .site-phone_wrap
+    text-align: center
+    font-family: MyriadSetProThin , sans-serif
+    .site-phone
+      font-size: 22px
+      color: #c8c8c8
+      margin-top: 8px
+    .callback
+      color: #777
+      border-bottom: 1px dashed #777
+      transition: border-bottom .25s ease, color .25s ease
+      font-size: 14px
+      &:hover, &:focus
+        color: lighten(#777,10%)
+        text-decoration: none
+        border-color: lighten(#777,10%)
+
+.btn
+  border-radius: 0
+  transition: background-color .25s ease, border-color .25s ease
+
+.btn-primary
+  background-color: $accent2
+  border-color: $accent2
+
+.breadcrumb
+  display: none
+
+#content
+  h1
+    margin-top: 0
+    margin-bottom: 20px
+    font-family: MyriadSetProThin , sans-serif
+
+.input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn
+  border-radius: 0
+
+.sub-cats
+  font-size: 14px
+  margin-top: 10px
+  .sub-name
+    font-family: serMyriadSetProSemiBold, sans-serif
+    display: inline-block
+  a
+    font-family: MyriadSetProThin , sans-serif
+    color: #333
+    text-decoration: underline
+    padding: 0 2px
+    &:hover
+      text-decoration: none
+
+.cat-head
+  border-bottom: 1px solid #EDEDED
+  margin-bottom: 30px
+
+.pagination>li:first-child>a, .pagination>li:first-child>span,
+.pagination>li:last-child>a, .pagination>li:last-child>span
+  border-radius: 0
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+  background-color: $accent2
+  border-color: $accent2
+
+
+.swiper-viewport
+  box-shadow: none
+
+
+.price-wrap
+  margin-top: 40px
+  .def-price
+    font-size: 35px
+    font-family: MyriadSetProThin, sans-serif
+
+#product
+  margin-top: 30px
+  button
+    background-color: $accent3
+    border-color: $accent3
+  .control-label
+    font-weight: normal
+    margin-bottom: 0
+    font-size: 14px
+
+.product-count
+  position: relative
+  top: -14px
+
+.fa-stack-2x
+  font-size: 1.5em
+
+#tab-description
+  padding: 30px 0
+
+.nav>li>a
+  border-radius: 0
+
+.product-page-image
+  list-style-type: none
+  padding: 0
+  margin: 0
+  .thumbnail
+    border: none
+
+#information-contact
+  #content
+    h3
+      text-align: left
+      font-family: MyriadSetProThin, sans-serif
+    address
+      margin-bottom: 0
+
+.panel
+  border-radius: 0
+
+#map
+  min-height: 420px
+  margin: 20px 0
+
+.panel-group .panel
+  border-radius: 0
+
+#product-search
+  .search-head
+    border-bottom: 1px solid #EDEDED
+    h2
+      padding: 2px 0 2px
+    .form-group
+      padding: 23px 0 5px 22px
+
+  .page-search
+    display: flex
+    .control-label
+      margin-right: 10px
+      padding-top: 5px
+  .btn
+    position: absolute
+    right: 16px
+
+
+
+
+
+@import "media"
+

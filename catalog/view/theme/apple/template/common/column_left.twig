@@ -1,0 +1,13 @@
+{% if modules %}
+<aside id="column-left" class="col-sm-3">
+    <div class="left-header">
+      <span class="toggle-top-text-left hidden-lg hidden-md hidden-sm">Категории</span>
+      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target="#collapseOne"><i class="fa fa-bars"></i></button>
+    </div>
+    <div id="collapseOne" class="collapse navbar-collapse">
+      {% for module in modules %}
+        {{ module }}
+      {% endfor %}
+    </div>
+</aside>
+{% endif %}

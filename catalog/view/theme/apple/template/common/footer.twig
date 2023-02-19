@@ -1,0 +1,127 @@
+<footer class="main-footer">
+  <div class="footer-cnt">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="logo">
+              {% if logo %}
+                <a href="{{ home }}">
+                 <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
+                 <h1><a href="{{ home }}">{{ name }}</a></h1>
+              {% endif %}
+            </div>
+          </div>
+          <div class="col-md-7 hidden-sm hidden-xs">
+            <nav class="footer-mnu">
+              {% if informations %}
+                 <ul class="nav navbar-nav">
+                   {% for information in informations %}
+                   <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+                   {% endfor %}
+                   <li><a href="/opencart.loc/index.php?route=product/category&path=65">Cкидки</a></li>
+                   <li><a href="{{ contact }}">Контакты</a></li>
+                 </ul>
+              {% endif %}
+            </nav>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <nav class="nav-social">
+              <ul>
+                <li><a href="http://vk.com" rel="nofollow" target="_blank"><i class="fa fa-vk"></i></a></li>
+                <li><a href="http://facebook.com" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://instagram.com" rel="nofollow" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="footer-phone">
+    <div class="container">
+      <div class="col-sm-12">
+        <div class="site-phone_wrap">
+          <div class="site-phone">
+            {{ telephone }}
+          </div>
+          <a href="#callback" class="callback">Заказать звонок</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# <div class="container">
+    <div class="row">
+      {% if informations %}
+      <div class="col-sm-3">
+        <h5>{{ text_information }}</h5>
+        <ul class="list-unstyled">
+         {% for information in informations %}
+          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+          <li><a href="{{ skidki }}">Cкидки</a></li>
+          <li><a href="{{ contact }}">Контакты</a></li>
+        </ul>
+      </div>
+      {% endif %}
+      <div class="col-sm-3">
+        <h5>{{ text_service }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+          <li><a href="{{ return }}">{{ text_return }}</a></li>
+          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>{{ text_extra }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+          <li><a href="{{ special }}">{{ text_special }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p>{{ powered }}</p>
+  </div> #}
+</footer>
+
+<div id="callback" class="callback-form product-popup">
+
+  <h2>Заказать звонок</h2>
+  <p>Введите номер телефона и наш менеджер перезвонит вам в течение <strong>15 минут</strong>.</p>
+
+  <form class="ajax-form">
+      <!-- Hidden Required Fields -->
+  <input type="hidden" name="project_name" value="IphoneService">
+  <input type="hidden" name="admin_email" value="{{ email }}">
+  <input type="hidden" name="form_subject" value="Заявка с сайта Айфонсервис">
+      <!-- END Hidden Required Fields -->
+
+  <input class="form-control" type="text" name="Телефон" placeholder="Введите ваш телефон..." required>
+  <button class="btn btn-primary">Заказать</button>
+
+  </form>
+
+  <div class="success">Спасибо за заявку!</div>
+
+</div>
+
+
+</div>
+
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+</body></html>
