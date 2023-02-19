@@ -1,6 +1,6 @@
 # iPhone Service
 
-You can see it [here](paketik7gm.temp.swtest.ru)
+You can see it [here](http://paketik7gm.temp.swtest.ru/)
 
 This is a template phone store on cms [Opencart](https://www.opencart.com) 3 . You can easily change it to your liking in the opencart admin panel.
 
